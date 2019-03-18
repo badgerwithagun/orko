@@ -677,7 +677,8 @@ public class MarketDataSubscriptionManager extends AbstractExecutionThreadServic
         // TODO User trade subscriptions, for now, we will poll even if we are
         // already getting them from the socket. This will persist until we can
         // safely detect and correct ordering/missed messages on the socket streams.
-        if (s.type().equals(USER_TRADE)) {
+        // Currently testing having this off for *binance only*.
+        if (s.type().equals(USER_TRADE) || (s.type().equals(BALANCE) && !exchangeName.equals(Exchanges.BINANCE))) {
           remainder.add(s);
         }
 
