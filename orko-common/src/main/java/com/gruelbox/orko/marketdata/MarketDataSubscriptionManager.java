@@ -674,10 +674,10 @@ public class MarketDataSubscriptionManager extends AbstractExecutionThreadServic
       Set<String> balanceCurrencies = new HashSet<>();
       for (MarketDataSubscription s : subscriptions) {
 
-        // User trade and balance subscriptions, for now, we will poll even if we are
+        // TODO User trade subscriptions, for now, we will poll even if we are
         // already getting them from the socket. This will persist until we can
         // safely detect and correct ordering/missed messages on the socket streams.
-        if (s.type().equals(USER_TRADE) || s.type().equals(BALANCE)) {
+        if (s.type().equals(USER_TRADE)) {
           remainder.add(s);
         }
 
