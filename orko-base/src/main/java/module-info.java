@@ -1,0 +1,31 @@
+open module com.gruelbox.orko.base {
+  exports com.gruelbox.orko.db;
+  exports com.gruelbox.orko.exception;
+  exports com.gruelbox.orko.util;
+  exports com.gruelbox.orko.wiring;
+  requires com.fasterxml.jackson.annotation;
+  requires com.fasterxml.jackson.databind;
+  requires com.google.common;
+  requires com.google.guice;
+  requires dropwizard.configuration;
+  requires dropwizard.core;
+  requires dropwizard.db;
+  requires dropwizard.guice.box;
+  requires dropwizard.hibernate;
+  requires dropwizard.lifecycle;
+  requires dropwizard.util;
+  requires hibernate.core;
+  requires io.reactivex.rxjava2;
+  requires java.naming;
+  requires java.sql;
+  requires java.ws.rs;
+  requires metrics.annotation;
+  requires morf.core;
+  requires morf.h2;
+  requires morf.mysql;
+  requires org.apache.commons.io;
+  requires org.apache.commons.lang3;
+  requires org.jooq;
+  requires slf4j.api;
+  requires validation.api;
+}

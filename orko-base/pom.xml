@@ -58,6 +58,10 @@
       <artifactId>morf-core</artifactId>
     </dependency>
     <dependency>
+      <groupId>javax.transaction</groupId>
+      <artifactId>javax.transaction-api</artifactId>
+    </dependency>
+    <dependency>
       <groupId>${morf.groupid}</groupId>
       <artifactId>morf-h2</artifactId>
     </dependency>
@@ -113,10 +117,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
       </plugin>
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>

@@ -252,7 +252,7 @@ public class TestCheckedExceptions {
     fail("No exception");
   }
 
-  private interface Dummy {
+  interface Dummy {
     public void doSomething();
     public void doSomethingWithCheckedException() throws IOException;
     public void doSomethingWithInterruptedException() throws InterruptedException;

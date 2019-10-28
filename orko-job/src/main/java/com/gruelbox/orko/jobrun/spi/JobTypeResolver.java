@@ -29,14 +29,13 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 import com.fasterxml.jackson.databind.DatabindContext;
 import com.fasterxml.jackson.databind.JavaType;
-import com.fasterxml.jackson.databind.jsontype.TypeIdResolver;
 import com.fasterxml.jackson.databind.jsontype.impl.TypeIdResolverBase;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableMap;
 
 /**
- * A Jackson {@link TypeIdResolver} for {@link Job} instances which uses
+ * A Jackson {@link com.fasterxml.jackson.databind.jsontype.TypeIdResolver} for {@link Job} instances which uses
  * {@link ServiceLoader} to find suitable concrete classes on the classpath.
  *
  * @author Graham Crockford

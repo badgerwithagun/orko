@@ -29,8 +29,6 @@ import com.gruelbox.orko.auth.AuthConfiguration;
 import com.gruelbox.orko.auth.RequestUtils;
 import com.warrenstrange.googleauth.IGoogleAuthenticator;
 
-import io.dropwizard.hibernate.UnitOfWork;
-
 /**
  * Only one IP can be whitelisted at a time and requires 2FA.
  */
@@ -74,7 +72,7 @@ class IpWhitelistingService {
 
   /**
    * Marks the current request IP as authorised. Requires
-   * an ongoing transaction or {@link UnitOfWork}.
+   * an ongoing transaction or {@link io.dropwizard.hibernate.UnitOfWork}.
    *
    * @param token The attempted 2FA token.
    * @return True if success.
